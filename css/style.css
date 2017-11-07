@@ -1,0 +1,78 @@
+/* sel uniw łapie wszystkie*/
+* {
+    font-size: 22px;
+}
+body{
+    margin: 0;
+}
+/* selek znacznika lapie wszystkie okr zn na str*/
+p{
+    font-size: 16px;
+}
+/*  selektor identyfikatora lapie el po okr atryb id */
+#universal {
+    background-color: grey;
+}
+/*selektor klasy lapie elem o okr atryb class*/
+.class-selector {
+    background-color: beige;
+}
+/*mozemy laczyc selektor identyf z selekt klasy
+*/
+#universal.blue {
+    background-color: blue
+}
+/*selektor bezposredniego potomka lapie el zagniezdzone bezposrednio w elemenci*/
+.potomek>p{font-size: 30px;
+    text-align: center;
+}
+
+/*seketor potomka ze spacja lapie wszystkie zagniezdzone elementy*/
+.potomek p {
+    font-size:  20px;
+}
+/*sekektor bezposredniego rodzenstwa (znak+)lapie pierwsze wyst selektora na tym samym poziomie zagniezdzenia*/
+.bezposrednie-rodzenstwo h2 + p {
+    color: violet;
+}
+/*selektor rodzenswa ( znak~) złapie wszystkie selektory na tym samy poziomie
+*/
+.bezposrednie-rodzenstwo h2 ~ p {
+    color: red;
+}
+
+/*poz elem
+*/
+#pozycjonowanie {
+    height: 400px;
+    background-color: green;
+    position: relative;
+}
+/*pozy relatywna zachowuje miejsce elementu odsuwa element od el nadrzednego*/
+/*el pozyc absolutnie ustawia sie zwgledem el nadrz, który jest poz relatyw. jezeli el nadrzedny nie jest poz relaty, to zawsze bedzie ustawial sie absolute wzgledem body. dodatk el poz absolutnie nie zachowuje miejsca */
+/*jezeli zmienimy el blokowemu na poz absolutna lub zafixowana to musimy pamiereac aby rozciagnac ponownie na 100% szerokości*/
+#pozycjonowanie .red {
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+#pozycjonowanie .blue{
+    background-color: blue;
+}
+#pozycjonowanie .inner p{
+    margin: 0;
+    color: white;
+}
+/*jezeli ustawiamy fix to ust el okna przegladarki, dodatkowo nalezy pamietac 0 i left :0 (przykleic do gronrgo okna i lewego boku okna przeglai rozciagna na 100% szerokosci)*/
+#main-nav {
+    background-color: aquamarine;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#main-nav ul {
+    margin: 0;
+}
